@@ -32,7 +32,7 @@ def bank(hw):
         elif pal < min_rev:
             min_rev = pal
             min_month = current_month
-    return [months, total, avg_chng, max_month, max_rev, min_month, min_rev]
+    return [month, total, avg_chng, max_month, max_rev, min_month, min_rev]
 
 #call
 #print
@@ -44,7 +44,7 @@ with open(os.path.join('Resources', 'budget_data.csv')) as csvfile:
     analysis = bank(csvreader)
 print(analysis[0, 1, 2, 3, 5, 4, 7, 6])
 
-write_path = 'users/'
+analysis = open("results.text",'w')
 
 
 
